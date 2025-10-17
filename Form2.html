@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>My Registration Form</title>
+    <style>
+    .button{
+        border: 2px solid black;
+        padding: 15px;
+        margin: 25px;
+        margin-left: 500px;
+        margin-top: 20px;
+    }
+    .button:hover{
+        background-color: aquamarine;
+        color: mediumblue;
+        font-size: larger;
+        font-weight: bolder;
+    }
+    .overlay {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+    .link{
+        padding-left: 15px;
+        margin: 25px;
+        margin-left: 420px;
+        margin-top: 20px;
+    }
+    .link:hover{
+        color: red;
+        font-size: larger;
+        font-weight: bolder;
+    }
+    .form-box{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 30px;
+            width: 500px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.7);
+    }
+    </style> 
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        function validateCaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                alert("Please complete the CAPTCHA.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+
+    </head> 
+   <body>
+
+    <div style="border: 2px solid black; margin-left:30px; width: 1200px;
+     margin-right: 30px; height: 800px; background-image: url(Kiit\ pic\ new.jpeg); background-repeat: no-repeat; height: 1500px; width: 1200px;
+     background-size: cover;"><br>
+
+     <div class="overlay">
+
+    <div class="form-box">
+
+     <img src="img.png" style="width: 100px; margin-left: 200px; margin-right: auto;">
+
+    <div class="form">
+     <h1 style="color: red; text-decoration: underline; margin-left: 75px; align-items: center;">College Registration Form</h1></div>
+
+    <form style="margin-left: 30px;" onsubmit="alert('Form submitted'); return false;">
+       
+<strong><label for="name" style="margin-left: auto; color: brown;">Enter Name</label><br></strong>
+<input type="text" id="name" name="name" placeholder="enter name" required style="width: 300px; height: 50px; margin-left: auto;">
+<br><br>
+
+<strong><label for="email" style="margin-left: auto;color: brown;">Enter Mail ID</label><br></strong>
+<input type="email" id="email" name="email" placeholder="enter mail" required style="width: 300px; height: 50px;
+margin-left: auto;"><br><br>
+
+<strong><label for="DOB" style="margin-left: auto; color: brown;">Enter DOB</label><br></strong>
+<input type="date" id="DOB" name="DOB" placeholder="enter date of birth" required style="width: 300px; height: 50px;
+margin-left: auto;"><br><br>
+
+<strong><p style="margin-left: auto; color: brown;">Select Gender:</p></strong>
+  
+<input type="radio" id="male" name="gender" value="male" style="margin-left: auto; color: brown; accent-color: #2d89ef;
+transform: scale(1.2);">
+<strong><label for="male" style="color: brown;">Male</label><br></strong>
+  
+<strong><input type="radio" id="female" name="gender" value="female" style="margin-left: auto; color: brown; accent-color: #2d89ef;
+transform: scale(1.2);"></strong>
+<strong><label for="female" style="color: brown;">Female</label><br><br><br></strong>
+
+<strong><label style="margin-left: auto; color: brown;">Enter Photo</label></strong><br>
+<strong><input type="file" required style="color: blue; font-weight: bold; margin-left: auto;"><br><br><br></strong>
+
+<strong><label for="Course" style="margin-left: auto; color: brown;">Choose your current Course:</label></strong>
+<select id="Course" name="Course">
+    <option value="Select">--Select--</option>
+    <option value="BTech">BTech</option>
+    <option value="BCA">BCA</option>
+    <option value="MBA">MBA</option>
+    <option value="MBBS">MBBS</option>
+    <option value="LLB">LLB</option>
+</select><br><br><br>
+
+<div class="g-recaptcha" data-sitekey="6LfbxEgrAAAAALPBw-T-K1NBy0nNEEFdtsBvBkG_"></div><br>
+
+<button type="submit"  style="width: 150px; margin-left: 150px; background-color: chartreuse; padding-right: 30px;" 
+class="button" target="_blank">Register</button><br><br>
+
+<a href="https://kiit.ac.in/" class="link" target="_blank" style="margin-top: 10px; margin-left: 120px;">
+KIIT University Website</a><br><br><br>
+
+<strong><marquee behavior="" direction="" style="color: darkred; border: 2px solid black; background-color: beige;" >Kalinga Institute of Industrial Technology (KIIT), located in Bhubaneswar, Odisha, is one of India’s premier private universities. Established in 1992 and declared a deemed university in 2004, KIIT is known for its world-class infrastructure, diverse academic programs in engineering, law, management, and medicine, and a strong focus on research and innovation.
+ It attracts students from all over India and more than 50 countries, offering a vibrant and inclusive campus environment.</marquee></strong>
+
+    <marquee behavior="" direction="">
+    <img src="kiit7.jpeg" alt="KIIT image"/>
+    <img src="kiit2.png" alt="KIIT image"/>
+    <img src="kiit3.jpeg" alt="KIIT image"/>
+    <img src="kiit4.jpeg" alt="KIIT image"/>
+    <img src="kiit5.jpeg" alt="KIIT image"/>
+    <img src="kiit6.jpeg" alt="KIIT image"/>
+    </marquee>
+
+ </form>
+    </div>
+    </div>
+   </body>
+</html>
